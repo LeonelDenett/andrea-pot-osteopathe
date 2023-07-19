@@ -19,7 +19,7 @@ type MyDrawerProps = {
 function MyDrawer({open, onClose} : MyDrawerProps) {
     return (
         <Box>
-            <Drawer open={open} onClose={onClose}>
+            <Drawer anchor='right' open={open} onClose={onClose}>
                 <List>
                     <ListItem>
                         <ListItemButton>

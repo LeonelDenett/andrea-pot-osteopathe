@@ -2,6 +2,8 @@
 
 // Next
 import { useState } from 'react';
+// Style
+import styles from './Navbar.module.css'
 // Mui Components
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
@@ -10,11 +12,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MyDrawer from '../drawer/Drawer';
+import { Typography } from '@mui/material';
 
 function Navbar() {
     const [open, setOpen] = useState(false)
 
-    const handleOpen = (index: number) => {
+    const handleOpen = () => {
         setOpen(true);
         console.log("open")
     };
@@ -26,21 +29,22 @@ function Navbar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
+            <AppBar position="static" className={styles.navbar}>
+                <Toolbar className={styles.toolbar}>
+                    <Typography>Andrea</Typography>
                     <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
+                        onClick={handleOpen}
+                        className={styles.menuButton}
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Button onClick={handleOpen} color="inherit">Login</Button>
-                    <MyDrawer open={open} onClose={handleClose} />
                 </Toolbar>
             </AppBar>
+            <MyDrawer open={open} onClose={handleClose} />
         </Box>
     );
 }
