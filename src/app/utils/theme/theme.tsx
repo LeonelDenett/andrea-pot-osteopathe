@@ -1,6 +1,6 @@
 "use client";
 // Mui Components
-import { createTheme, ThemeOptions, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeOptions, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 // Font
 import '@fontsource-variable/rubik';
@@ -9,12 +9,13 @@ import { NextAppDirEmotionCacheProvider } from './createEmotionCache';
 
 const themeOptions: ThemeOptions = {
     typography: {
-        fontSize: 16,
         fontFamily: 'Rubik Variable, sans-serif',
-    }
+    },
 };
 
-const theme = createTheme(themeOptions);
+let theme = createTheme(themeOptions);
+
+theme = responsiveFontSizes(theme)
 
 export default function ThemeRegistry({
     children,
