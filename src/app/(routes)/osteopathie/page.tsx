@@ -1,5 +1,3 @@
-// NextJs
-import Image from 'next/image';
 // Styles
 import styles from './page.module.css';
 // Mui Components
@@ -9,8 +7,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 // Components
 import Logo from '@/app/components/logo/Logo';
-// Images
-import osteopathie from '../../images/osteopathie.jpeg';
 
 
 function Osteopathie() {
@@ -31,10 +27,10 @@ function Osteopathie() {
                                     <Typography variant='h6' fontWeight={400}>
                                         L&apos;ostéopathie est une médecine manuelle alternative qui permet de diminuer des douleurs
                                         d&apos;origine fonctionnelle.<br/> Elle est complémentaire de la médecine traditionnelle.<br/>
-                                        L&apos;ostéopathe prend le temps d'analyser l&apos;organisation globale du corps du patient,
-                                        et ainsi essayer de comprendre l'origine de sa douleur.<br/>
+                                        L&apos;ostéopathe prend le temps d&apos;analyser l&apos;organisation globale du corps du patient,
+                                        et ainsi essayer de comprendre l&apos;origine de sa douleur.<br/>
                                         Les techniques réalisées sur le système musculosquelettique et myofacial du patient
-                                        l'aident à enclencher les différents mécanismes
+                                        l&apos;aident à enclencher les différents mécanismes
                                         d&apos;autoguérison du corps et à redonner de la mobilité à certaines zones corporelles.
                                     </Typography>
                                 </Box>
