@@ -1,0 +1,20 @@
+.main {
+    background-color: #ebe8de;
+}
+.title {
+    text-align: center;
+    color: #5c8984;
+    margin-top: 1rem;
+}
+.osteopathieContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.osteopathie {
+    background-color: #5c8984 !important;
+    color: #ebe8de !important;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2rem !important;
+}

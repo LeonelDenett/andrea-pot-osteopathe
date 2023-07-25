@@ -1,51 +1,46 @@
 'use client'
 
-// Next
-import { useState } from 'react';
+// NextJs
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
 // Style
-import styles from './Navbar.module.css'
+import styles from './Navbar.module.css';
 // Mui Components
-import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import MyDrawer from '../drawer/Drawer';
-import { Typography } from '@mui/material';
+// Mui Icons
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 function Navbar() {
-    const [open, setOpen] = useState(false)
+    const url = usePathname()
+    const [showIcon, setShowIcon] = useState(url !== '/')
 
-    const handleOpen = () => {
-        setOpen(true);
-        console.log("open")
-    };
-    
-    const handleClose = () => {
-        setOpen(false);
-        console.log("close")
-    };
+    useEffect(() => {
+        // Imprimir la URL actual en la consola
+        console.log('URL actual:', url);
+        setShowIcon(url !== '/')
+      }, [url]);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" className={styles.navbar}>
+        <header>
+            <AppBar position='sticky'>
                 <Toolbar className={styles.toolbar}>
-                    <Typography>Andrea</Typography>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        onClick={handleOpen}
-                        className={styles.menuButton}
-                    >
-                        <MenuIcon />
-                    </IconButton>
+                    <Typography color={"#5c8984"}>Andréa Pot - Ostéopathe</Typography>
+                    {
+                        showIcon &&
+                        <Link href='/'>
+                            <IconButton>
+                                <KeyboardBackspaceIcon fontSize='large' sx={{color:"#5c8984"}} />
+                            </IconButton>
+                        </Link>
+                    }
                 </Toolbar>
             </AppBar>
-            <MyDrawer open={open} onClose={handleClose} />
-        </Box>
+        </header>
     );
 }
 

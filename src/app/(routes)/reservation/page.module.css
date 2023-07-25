@@ -1,0 +1,93 @@
+.main {
+    background-color: #5c8984;
+}
+.paper {
+    margin: 1rem;
+    border-radius: 2rem !important;
+}
+.link {
+    text-decoration: none;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Dashboard Section */
+.title {
+    text-align: center;
+    color: #ebe8de;
+}
+.doctoLibContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem !important;
+    text-transform: capitalize !important;
+}
+.doctoLib {
+    padding: 1.5rem;
+    background-color: #ebe8de !important;
+    color: #5c8984 !important;
+    border-radius: 1.5rem !important;
+    margin-bottom: 1rem;
+}
+/* Interactive Section */
+.interactiveContainer {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+.interactiveButtons {
+    background-color: #ebe8de;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.buttons {
+    background-color: #5c8984 !important;
+    color: #ebe8de !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem !important;
+    width: 5rem;
+    height: 5rem;
+}
+.itineraryContainer {
+    margin-bottom: 1rem;
+}
+.itinerary {
+    background-color: #5c8984;
+    color: #ebe8de;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+.itineraryData {
+    display: flex;
+    flex-direction: column;
+}
+.divider {
+    background-color: #ebe8de;
+    width: 2px;
+}
+/* Patients Section */
+.patients {
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebe8de;
+    padding: 1rem;
+    gap: .5rem;
+}
+.dividerPatients {
+    background-color: #5c8984 !important;
+    height: 2px !important;
+}

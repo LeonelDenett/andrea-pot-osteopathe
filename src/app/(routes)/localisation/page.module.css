@@ -1,0 +1,25 @@
+.main {
+    background-color: #5c8984;
+}
+.paper {
+    margin: 1rem;
+    border-radius: 2rem !important;
+}
+
+.data {
+    display: inline-block;
+    column-gap: .5rem;
+}
+/* Dashboard Section */
+.title {
+    text-align: center;
+    color: #ebe8de;
+}
+.informations {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebe8de;
+    border-radius: 2rem;
+    padding: 1rem;
+    gap: .5rem;
+}
