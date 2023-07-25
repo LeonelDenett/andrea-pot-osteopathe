@@ -1,0 +1,27 @@
+.main {
+    background-color: #ebe8de;
+}
+.photoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+.photo {
+    border-radius: 50% !important;
+    height: 12rem;
+    width: 12rem;
+    overflow: hidden;
+    position: relative;
+}
+.titleContainer {
+    text-align: center;
+    color: #5c8984;
+}
+.studies {
+    background-color: #5c8984 !important;
+    color: #ebe8de !important;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2rem !important;
+}

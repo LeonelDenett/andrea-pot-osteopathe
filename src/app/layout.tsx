@@ -1,3 +1,5 @@
+import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/Navbar';
 import './globals.css'
 // Theme
 import ThemeRegistry from './utils/theme/theme';
@@ -19,7 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeRegistry>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <Navbar/>
+          {children}
+          <Footer/>
+        </body>
       </ThemeRegistry>
     </html>
   );

@@ -11,6 +11,15 @@ const themeOptions: ThemeOptions = {
     typography: {
         fontFamily: 'Rubik Variable, sans-serif',
     },
+    components: {
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "2rem"
+                }
+            }
+        },
+    }
 };
 
 let theme = createTheme(themeOptions);

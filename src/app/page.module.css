@@ -7,6 +7,54 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 .title {
+    color: #ebe8de;
+}
+.subtitle {
+    color: #ebe8de;
+}
+.card {
+    position: relative;
+    height: 12.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow: hidden;
+    border: solid .2rem #ebe8de;
+}
+.reservationCardMedia {
+    height: 12.5rem;
+}
+.reservationImage {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.overlayReservation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080; /* Color rosa con opacidad 0.2 */
+    z-index: 1;
+}
+.titleReservationContainer {
+    background-color: black;
+    padding: 1rem;
+    height: 2rem;
+    width: 2rem;
+}
+.titleReservation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px #00000060;
 }

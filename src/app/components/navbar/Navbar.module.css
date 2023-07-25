@@ -1,10 +1,6 @@
-.navbar {
-}
 .toolbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
-}
-.menuButton {
+    background-color: #ebe8de;
 }
