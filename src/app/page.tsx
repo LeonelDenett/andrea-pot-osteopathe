@@ -1,24 +1,21 @@
 // Next
 import Link from 'next/link';
 import Image from 'next/image'
+// Styles
 import styles from './page.module.css';
 // Mui Components
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CardActionArea from '@mui/material/CardActionArea';
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
-// Components
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
 // Image
-import logo from "./images/logo.jpeg";
 import reservation from "./images/reservation.jpeg";
 import localisation from "./images/localisation.jpeg";
 import andrea from './images/andrea.jpeg';
 import osteopathie from './images/osteopathie.jpeg';
+// Components
 import Logo from './components/logo/Logo';
 
 
@@ -38,7 +35,9 @@ export default function Home() {
                     <Grid item xs={12} lg={6}>
                         <section>
                             <Box className={styles.presentation}>
+                                {/* Logo */}
                                 <Logo/>
+                                {/* Presentation */}
                                 <Typography component="h1" variant="h1" fontWeight={400} className={styles.title}>Andréa Pot</Typography>
                                 <Typography component="h2" variant="h2" className={styles.title}>Ostéopathe D.O</Typography>
                                 <Typography component="p" variant="body2" className={styles.subtitle}>Des doigts qui pensent, sentent, voient et savent</Typography>
