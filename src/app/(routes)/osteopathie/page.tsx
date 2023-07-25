@@ -24,18 +24,18 @@ function Osteopathie() {
                             {/* Logo */}
                             <Logo/>
                             <Box className={styles.title}>
-                                <Typography component='h1' variant='h1'>L'ostéopathie, c'est quoi ?</Typography>
+                                <Typography component='h1' variant='h1'>L&apos;ostéopathie, c&apos;est quoi ?</Typography>
                             </Box>
                             <Paper elevation={8} className={styles.osteopathie}>
                                 <Box className={styles.osteopathieContainer}>
                                     <Typography variant='h6' fontWeight={400}>
-                                        L’ostéopathie est une médecine manuelle alternative qui permet de diminuer des douleurs
-                                        d’origine fonctionnelle.<br/> Elle est complémentaire de la médecine traditionnelle.<br/>
-                                        L’ostéopathe prend le temps d'analyser l’organisation globale du corps du patient,
+                                        L&apos;ostéopathie est une médecine manuelle alternative qui permet de diminuer des douleurs
+                                        d&apos;origine fonctionnelle.<br/> Elle est complémentaire de la médecine traditionnelle.<br/>
+                                        L&apos;ostéopathe prend le temps d'analyser l&apos;organisation globale du corps du patient,
                                         et ainsi essayer de comprendre l'origine de sa douleur.<br/>
                                         Les techniques réalisées sur le système musculosquelettique et myofacial du patient
                                         l'aident à enclencher les différents mécanismes
-                                        d’autoguérison du corps et à redonner de la mobilité à certaines zones corporelles.
+                                        d&apos;autoguérison du corps et à redonner de la mobilité à certaines zones corporelles.
                                     </Typography>
                                 </Box>
                             </Paper>
