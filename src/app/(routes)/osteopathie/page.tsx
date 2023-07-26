@@ -23,18 +23,13 @@ function Osteopathie() {
                         <section>
                             {/* Logo */}
                             <Logo/>
-                            <Box className={styles.photoContainer}>
-                                <Paper className={styles.photo} elevation={4}>
-                                    <Image alt='osteopathie' src={osteopathie} fill />
-                                </Paper>
+                            <Box className={styles.title}>
+                                <Typography component='h1' variant='h2'>L&apos;ostéopathie, c&apos;est quoi ?</Typography>
                             </Box>
                         </section>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                    <section>
-                            <Box className={styles.title}>
-                                <Typography component='h1' variant='h2'>L&apos;ostéopathie, c&apos;est quoi ?</Typography>
-                            </Box>
+                        <section>
                             <Box className={styles.osteopathieContainer}>
                                 <Paper elevation={8} className={styles.osteopathie}>
                                     <Typography variant='h6' fontWeight={400}>
