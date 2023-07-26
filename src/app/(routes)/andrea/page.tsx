@@ -9,7 +9,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 // Components
 import photoProfile from '../../images/andrea.jpeg';
-import Logo from '@/app/components/logo/Logo';
 
 function Andrea() {
     return (
@@ -17,7 +16,7 @@ function Andrea() {
             <Box className={styles.main}>
                 <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem", lg:"15rem"}}}>
                     {/* Studies & Diplomes */}
-                    <Grid item xs={12} lg={6} sx={{backgroundColor:"#ebe8de", borderRadius:"2rem"}}>
+                    <Grid item xs={12} lg={6} sx={{backgroundColor:"#ebe8de", borderRadius:"2rem"}} my={2}>
                         <Box className={styles.photoContainer}>
                             <Paper elevation={8} className={styles.photo}>
                                 <Image alt="Andrea" src={photoProfile} fill />
