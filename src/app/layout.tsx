@@ -1,3 +1,6 @@
+// Mui Components
+import Box from '@mui/material/Box';
+// Components
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import './globals.css'
@@ -21,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeRegistry>
-        <body className={inter.className}>
+        <body>
           <Navbar/>
-          {children}
+            {children}
           <Footer/>
         </body>
       </ThemeRegistry>

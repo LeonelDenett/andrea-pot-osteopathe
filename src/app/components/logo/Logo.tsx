@@ -5,7 +5,7 @@ import styles from './Logo.module.css';
 // Mui Components
 import Box from '@mui/material/Box';
 // Image
-import logo from '../../images/logo.jpeg'
+import logo from '../../images/logo.png'
 
 function Logo() {
     return (

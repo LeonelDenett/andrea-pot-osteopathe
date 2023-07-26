@@ -10,9 +10,12 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 // Mui Icons
 import PhoneIcon from '@mui/icons-material/Phone';
 import RoomIcon from '@mui/icons-material/Room';
+
 
 
 function Reservation() {
@@ -21,22 +24,22 @@ function Reservation() {
     return (
         <main>
         <Box className={styles.main}>
-            <Grid container>
+            <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem", lg:"10rem"}}}>
                 {/* Dashboard */}
-                <Grid item xs={12} lg={6}>
+                <Grid item xs={12} lg={6} sx={{backgroundColor:'#5c8984'}}>
                     <section>
                         {/* Logo */}
                         <Logo/>
                         {/* Title */}
                         <Box className={styles.title}>
-                            <Typography component='h1' variant="h1">Prendre RDV</Typography>
+                            <Typography component='h1' variant="h2">Prendre RDV</Typography>
                         </Box>
                         {/* DoctoLib */}
                         <Box className={styles.center}>
                             <Link href='https://www.google.fr/' target='_blank' className={styles.link}>
                                 <Button className={styles.doctoLibContainer}>
                                     <Box component={Paper} elevation={8} className={styles.doctoLib}>
-                                        <Typography variant="h2">DoctoLib</Typography>
+                                        <Typography variant="h3" fontWeight={300}>DoctoLib</Typography>
                                     </Box>
                                 </Button>
                             </Link>
@@ -44,13 +47,13 @@ function Reservation() {
                     </section>
                 </Grid>
                 {/* Interactive Buttons & Itinerary */}
-                <Grid item xs={12} lg={6}>
-                    <Grid container>
-                        {/* Icons */}
-                        <Grid item xs={12} lg={6} sx={{backgroundColor:"#ebe8de"}}>
+                <Grid item xs={12} lg={6} sx={{backgroundColor:'#ebe8de', borderRadius:"2rem"}} mb={2}>
+                    <Grid container pl={2} pr={2}>
+                        <Grid item xs={12}>
                             <section>
+                                {/* Icons */}
                                 <Box className={styles.interactiveContainer}>
-                                    <Box className={styles.interactiveButtons}>
+                                    <Box className={styles.interactiveButtons} sx={{display: {lg:"none"}}}>
                                         {/* Phone Icon */}
                                         <Link href='tel:0760313917'>
                                             <Box component={Paper} elevation={4} className={styles.buttons}>
@@ -64,6 +67,19 @@ function Reservation() {
                                             </Box>
                                         </Link>
                                     </Box>
+                                </Box>
+                                {/* Informations */}
+                                <Box sx={{display: {xs:"none", lg:"flex"}}} className={styles.informationsContainer}>
+                                    <Paper elevation={8} className={styles.informations}>
+                                        <Box>
+                                            <Typography>Téléphone : </Typography>
+                                            <Typography>07 60 31 39 17</Typography>
+                                        </Box>
+                                        <Box>
+                                            <Typography>Adresse : </Typography>
+                                            <Typography>Maison médicale de la Baie, Z.A La Gare, 29890 Plounéour-Brignogan-Plages</Typography>
+                                        </Box>
+                                    </Paper>
                                 </Box>
                                 {/* Itinerary */}
                                 <Box className={styles.itineraryContainer}>
@@ -97,7 +113,7 @@ function Reservation() {
                             </section>
                         </Grid>
                         {/* Patients */}
-                        <Grid item xs={12} lg={6}>
+                        <Grid item xs={12}>
                             <section>
                                 <Paper elevation={4} className={styles.paper}>
                                     <Box className={styles.patients}>

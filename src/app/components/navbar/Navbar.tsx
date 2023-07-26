@@ -27,7 +27,7 @@ function Navbar() {
 
     return (
         <header>
-            <AppBar position='sticky'>
+            <AppBar position='static' className={styles.appBar}>
                 <Toolbar className={styles.toolbar}>
                     <Typography color={"#5c8984"}>Andréa Pot - Ostéopathe</Typography>
                     {

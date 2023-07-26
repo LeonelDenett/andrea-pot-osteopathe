@@ -15,42 +15,32 @@ function Andrea() {
     return (
         <main>
             <Box className={styles.main}>
-                <Grid container>
-                    {/* Logo & Profile */}
-                    <Grid item xs={12} lg={6}>
-                        <section>
-                            <Logo/>
-                            <Box className={styles.photoContainer}>
-                                <Paper elevation={8} className={styles.photo}>
-                                    <Image alt="Andrea" src={photoProfile} fill />
-                                </Paper>
-                            </Box>
-                            <Box className={styles.titleContainer}>
-                                <Typography component='h1' variant='h1'>Andréa Pot</Typography>
-                                <Typography component="h2"  variant='h2'>Ostéopathe D.O</Typography>
-                            </Box>
-                        </section>
-                    </Grid>
+                <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem", lg:"15rem"}}}>
                     {/* Studies & Diplomes */}
-                    <Grid item xs={12} lg={6}>
-                        <Grid container>
-                            <Grid item>
-                                <Paper elevation={8} className={styles.studies}>
-                                    <Box>
-                                        <Typography>
-                                            2023 : Diplômée de l’institut d’Ostéopathie de Rennes-Bretagne<br/>
-                                            Mémoire de fin d’étude : État des lieux des connaissances
-                                            scientifiques des interrelations entre l’intestin et le cerveau
-                                            impliquées dans la dépression et l’anxiété. Quelles perspectives
-                                            pour l’ostéopathie ?<br/><br/>
+                    <Grid item xs={12} lg={6} sx={{backgroundColor:"#ebe8de", borderRadius:"2rem"}}>
+                        <Box className={styles.photoContainer}>
+                            <Paper elevation={8} className={styles.photo}>
+                                <Image alt="Andrea" src={photoProfile} fill />
+                            </Paper>
+                        </Box>
+                        <Box className={styles.titleContainer}>
+                            <Typography component='h1' variant='h2'>Andréa Pot</Typography>
+                            <Typography component="h2" variant='h3' fontWeight={300}>Ostéopathe D.O</Typography>
+                        </Box>
+                        <Box className={styles.studiesContainer}>
+                            <Paper elevation={8} className={styles.studies}>
+                                <Typography>
+                                    2023 : Diplômée de l’institut d’Ostéopathie de Rennes-Bretagne<br/>
+                                    Mémoire de fin d’étude : État des lieux des connaissances
+                                    scientifiques des interrelations entre l’intestin et le cerveau
+                                    impliquées dans la dépression et l’anxiété. Quelles perspectives
+                                    pour l’ostéopathie ?<br/><br/>
 
-                                            2023 – 2024 (en cours) : Diplôme universitaire Nutrition
-                                            Micronutrition Exercice et Santé à Poitiers.
-                                        </Typography>
-                                    </Box>
-                                </Paper>
-                            </Grid>
-                        </Grid>
+                                    2023 – 2024 (en cours) : Diplôme universitaire Nutrition
+                                    Micronutrition Exercice et Santé à Poitiers.
+                                </Typography>
+                            </Paper>
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>

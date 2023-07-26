@@ -1,21 +1,47 @@
 .main {
     background-color: #ebe8de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem!important;
+    margin-top: .5rem;
+}
+.photo {
+    height: 20rem;
+    width: 100%;
 }
 .title {
     text-align: center;
     color: #5c8984;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .osteopathieContainer {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 .osteopathie {
     background-color: #5c8984 !important;
     color: #ebe8de !important;
     padding: 1rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     border-radius: 2rem !important;
     text-align: center;
+    max-width: 50rem;
+}
+@media (min-width: 1200px) {
+    .main {
+        height: calc(100vh - 9rem);
+    }
 }

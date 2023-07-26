@@ -1,8 +1,10 @@
 .main {
+    height: auto;
     background-color: #5c8984;
+    display: flex;
+    align-items: center;
 }
 .paper {
-    margin: 1rem;
     border-radius: 2rem !important;
 }
 .link {
@@ -13,6 +15,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 /* Dashboard Section */
 .title {
@@ -27,7 +30,7 @@
     text-transform: capitalize !important;
 }
 .doctoLib {
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: #ebe8de !important;
     color: #5c8984 !important;
     border-radius: 1.5rem !important;
@@ -35,18 +38,18 @@
 }
 /* Interactive Section */
 .interactiveContainer {
-    padding-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 1rem;
+    padding-bottom: 1rem;
 }
 .interactiveButtons {
     background-color: #ebe8de;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    padding-top: 1rem;
 }
 .buttons {
     background-color: #5c8984 !important;
@@ -54,21 +57,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 2rem !important;
+    border-radius: 1.5rem !important;
     width: 5rem;
     height: 5rem;
 }
-.itineraryContainer {
+.informations {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #5c8984 !important;
+    color: #ebe8de !important;
     margin-bottom: 1rem;
+    border-radius: 1.5rem !important;
 }
 .itinerary {
     background-color: #5c8984;
     color: #ebe8de;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
     gap: .5rem;
+    margin-bottom: 1rem;
 }
 .itineraryData {
     display: flex;
@@ -80,15 +95,23 @@
 }
 /* Patients Section */
 .patients {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    background-color: #ebe8de;
+    background-color: #5c8984;
+    color: #ebe8de;
     padding: 1rem;
     gap: .5rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 .dividerPatients {
-    background-color: #5c8984 !important;
+    background-color: #ebe8de !important;
     height: 2px !important;
+}
+
+@media (min-width: 1200px) {
+    .main {
+        height: calc(100vh - 9rem);
+    }
 }

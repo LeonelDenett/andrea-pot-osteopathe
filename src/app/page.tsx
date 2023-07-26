@@ -20,17 +20,17 @@ import Logo from './components/logo/Logo';
 
 
 export default function Home() {
-    const definidio = styles.overlayReservation
+    const overlay = styles.overlay;
     const data = [
-        {img: reservation, url: "/reservation", style: definidio, title: "Prendre RDV"},
-        {img: localisation, url: "/localisation", style: definidio, title: "Adresse & Contact"},
-        {img: andrea, url: "/andrea", style: definidio, title: "Andréa Pot"},
-        {img: osteopathie, url: "/osteopathie", style: definidio, title: "Ostéopathie"},
-    ]
+        {img: reservation, url: "/reservation", style: overlay, title: "Prendre RDV"},
+        {img: localisation, url: "/localisation", style: overlay, title: "Adresse & Contact"},
+        {img: andrea, url: "/andrea", style: overlay, title: "Andréa Pot"},
+        {img: osteopathie, url: "/osteopathie", style: overlay, title: "Ostéopathie"},
+    ];
     return (
-        <Box>
-            <main className={styles.main}>
-                <Grid container>
+        <main>
+            <Box className={styles.main}>
+                <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'}>
                     {/* Presentation Section*/}
                     <Grid item xs={12} lg={6}>
                         <section>
@@ -38,8 +38,8 @@ export default function Home() {
                                 {/* Logo */}
                                 <Logo/>
                                 {/* Presentation */}
-                                <Typography component="h1" variant="h1" fontWeight={400} className={styles.title}>Andréa Pot</Typography>
-                                <Typography component="h2" variant="h2" className={styles.title}>Ostéopathe D.O</Typography>
+                                <Typography component="h1" variant="h1" fontWeight={400} className={styles.name}>Andréa Pot</Typography>
+                                <Typography component="h2" variant="h2" className={styles.name}>Ostéopathe D.O</Typography>
                                 <Typography component="p" variant="body2" className={styles.subtitle}>Des doigts qui pensent, sentent, voient et savent</Typography>
                             </Box>
                         </section>
@@ -54,12 +54,12 @@ export default function Home() {
                                     <Card className={styles.card}>
                                         <CardActionArea>
                                             <Link href={item.url}>
-                                                <CardMedia className={styles.reservationCardMedia}>
-                                                    <Image src={item.img} alt="Reservation" className={styles.reservationImage} />
-                                                    <Box className={styles.titleReservationContainer}>
-                                                        <Typography variant="h4" className={styles.titleReservation}>{item.title}</Typography>
+                                                <CardMedia className={styles.cardMedia}>
+                                                    <Image src={item.img} alt="Slide" className={styles.image} />
+                                                    <Box className={styles.titleContainer}>
+                                                        <Typography variant="h4" className={styles.title}>{item.title}</Typography>
                                                     </Box>
-                                                    <Box className={definidio}></Box>
+                                                    <Box className={overlay}></Box>
                                                 </CardMedia>
                                             </Link>
                                         </CardActionArea>
@@ -70,7 +70,7 @@ export default function Home() {
                         </Grid>
                     </Grid>
                 </Grid>
-            </main>
-        </Box>
+            </Box>
+        </main>
     )
 }

@@ -1,6 +1,9 @@
 .main {
     width: 100%;
     background-color: #5c8984;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
 }
 .presentation {
     display: flex;
@@ -9,7 +12,7 @@
     flex-direction: column;
     margin-bottom: 2rem;
 }
-.title {
+.name {
     color: #ebe8de;
 }
 .subtitle {
@@ -17,6 +20,9 @@
     text-align: center;
 }
 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 12.5rem;
     margin-left: 1rem;
@@ -24,16 +30,16 @@
     overflow: hidden;
     border: solid .2rem #ebe8de;
 }
-.reservationCardMedia {
+.cardMedia {
     height: 12.5rem;
 }
-.reservationImage {
+.image {
     width: 100%;
     height: 100%;
     z-index: -1;
     object-fit: cover;
 }
-.overlayReservation {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,13 +48,13 @@
     background-color: #00000080; /* Color rosa con opacidad 0.2 */
     z-index: 1;
 }
-.titleReservationContainer {
+.titleContainer {
     background-color: black;
     padding: 1rem;
     height: 2rem;
     width: 2rem;
 }
-.titleReservation {
+.title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,4 +64,38 @@
     color: white;
     z-index: 2;
     text-shadow: 2px 2px #00000060;
+}
+
+@media (min-width: 1200px) {
+    .main {
+        padding-left: 10rem;
+        padding-right: 10rem;
+        height: calc(100vh - 9rem);
+    }
+}
+
+@media (min-width: 1420px) {
+    .main {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    .card {
+        height: 18rem;
+    }
+    .cardMedia {
+        height: 18rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .main {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    .card {
+        height: 20rem;
+    }
+    .cardMedia {
+        height: 20rem;
+    }
 }

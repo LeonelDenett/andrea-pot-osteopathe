@@ -1,4 +1,6 @@
 .img {
-    width: 100vw;
+    width: 100%;
     height: auto;
+    max-height: 20rem;
+    border-radius: 2rem;
 }
