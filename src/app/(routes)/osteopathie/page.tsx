@@ -1,5 +1,3 @@
-// NextJs
-import Image from 'next/image';
 // Styles
 import styles from './page.module.css';
 // Mui Components
@@ -9,8 +7,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 // Components
 import Logo from '@/app/components/logo/Logo';
-// Image
-import osteopathie from '../../images/osteopathie.jpeg'
 
 
 function Osteopathie() {

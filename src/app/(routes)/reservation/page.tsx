@@ -10,6 +10,8 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+
+
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 // Mui Icons
@@ -36,7 +38,7 @@ function Reservation() {
                         </Box>
                         {/* DoctoLib */}
                         <Box className={styles.center}>
-                            <Link href='https://www.google.fr/' target='_blank' className={styles.link}>
+                            <Link href='https://www.doctolib.fr/osteopathe/plouneour-brignogan-plages/andrea-pot-plouneour-brignogan-plages?pid=practice-465302&agenda_ids%5B%5D=1368561' target='_blank' className={styles.link}>
                                 <Button className={styles.doctoLibContainer}>
                                     <Box component={Paper} elevation={8} className={styles.doctoLib}>
                                         <Typography variant="h3" fontWeight={300}>DoctoLib</Typography>

@@ -24,14 +24,14 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 12.5rem;
+    height: 15rem;
     margin-left: 1rem;
     margin-right: 1rem;
     overflow: hidden;
     border: solid .2rem #ebe8de;
 }
 .cardMedia {
-    height: 12.5rem;
+    height: 15rem;
 }
 .image {
     width: 100%;
