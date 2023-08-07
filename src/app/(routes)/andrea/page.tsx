@@ -29,12 +29,14 @@ function Andrea() {
                         <Box className={styles.studiesContainer}>
                             <Paper elevation={8} className={styles.studies}>
                                 <Typography>
-                                    2023 : Diplômée de l’institut d’Ostéopathie de Rennes-Bretagne<br/>
-                                    Mémoire de fin d’étude : État des lieux des connaissances
+                                    2023 : Diplômée de l’institut d’Ostéopathie de Rennes-Bretagne
+                                </Typography><br/>
+                                <Typography color="#ffb4ac">Mémoire de fin d’étude : État des lieux des connaissances
                                     scientifiques des interrelations entre l’intestin et le cerveau
                                     impliquées dans la dépression et l’anxiété. Quelles perspectives
-                                    pour l’ostéopathie ?<br/><br/>
-
+                                    pour l’ostéopathie ?
+                                </Typography><br/>
+                                <Typography>
                                     2023 – 2024 (en cours) : Diplôme universitaire Nutrition
                                     Micronutrition Exercice et Santé à Poitiers.
                                 </Typography>
