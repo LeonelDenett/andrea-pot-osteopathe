@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Andréa Pot - Ostéopathe',
     description: 'Andréa Pot, ostéopathe D.O à Maison médicale de la Baie. Spécialisée dans le traitement et la prévention des troubles musculo-squelettiques.',
     images: [{
-      url: '/images/logo.jpeg',
+      url: '/favicon/favicon.ico',
       alt: 'Andréa Pot Logo',
       width: 800,
       height: 600,
