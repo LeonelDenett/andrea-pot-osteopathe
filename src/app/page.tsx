@@ -1,7 +1,6 @@
 // Next
 import Link from 'next/link';
 import Image from 'next/image';
-import Head from "next/head";
 // Styles
 import styles from './page.module.css';
 // Mui Components
@@ -18,6 +17,7 @@ import andrea from './images/andrea.jpeg';
 import osteopathie from './images/osteopathie.jpeg';
 // Components
 import Logo from './components/logo/Logo';
+import RootLayout from './layout';
 
 
 export default function Home() {
@@ -28,19 +28,9 @@ export default function Home() {
         {img: andrea, url: "/andrea", style: {}, styles: "objectPosition: 'center calc(50% + 3.5rem)'", title: "Andréa Pot",},
         {img: osteopathie, url: "/osteopathie", title: "Ostéopathie"},
     ];
-    const siteUrl = "https://andrea-pot-osteopathe.vercel.app/"
 
     return (
         <main>
-            <Head>
-                <title>Andréa Pot - Ostéopathe à Plounéour-Brignogan-Plages</title>
-                <meta name="description" content="Andréa Pot, ostéopathe D.O à Maison médicale de la Baie. Spécialisée dans le traitement et la prévention des troubles musculo-squelettiques." />
-                <meta name="keywords" content="Andréa Pot, ostéopathe, Maison médicale de la Baie, Plounéour-Brignogan-Plages, traitement musculo-squelettique, prévention santé" />
-                <meta property="og:title" content="Andréa Pot - Ostéopathe à Plounéour-Brignogan-Plages" />
-                <meta property="og:description" content="Andréa Pot, ostéopathe D.O à Maison médicale de la Baie. Spécialisée dans le traitement et la prévention des troubles musculo-squelettiques." />
-                <meta property="og:image" content={`${siteUrl}/images/logo.jpeg`} />
-                <meta property="og:url" content="https://andrea-pot-osteopathe.vercel.app/localisation" />
-            </Head>
             <Box className={styles.main}>
                 <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'}>
                     {/* Presentation Section*/}
