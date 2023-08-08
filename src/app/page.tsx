@@ -42,7 +42,6 @@ export default function Home() {
                                 {/* Presentation */}
                                 <Typography component="h1" variant="h1" fontWeight={400} className={styles.name}>Andréa Pot</Typography>
                                 <Typography component="h2" variant="h2" className={styles.name}>Ostéopathe D.O</Typography>
-                                <Typography component="p" variant="body2" className={styles.subtitle}>Des doigts qui pensent, sentent, voient et savent</Typography>
                             </Box>
                         </section>
                     </Grid>
