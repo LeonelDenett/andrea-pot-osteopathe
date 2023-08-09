@@ -41,7 +41,5 @@
 @media (min-width: 1200px) {
     .main {
         height: calc(100vh - 9rem);
-        padding-left: 10rem;
-        padding-right: 10rem;
     }
 }

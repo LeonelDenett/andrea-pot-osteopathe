@@ -19,7 +19,7 @@ function Localisation() {
     return (
         <main>
             <Box className={styles.main}>
-                <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} spacing={2} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem", lg:"10rem", xl:"20rem"}}}>
+                <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} spacing={2} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem"}}}>
                     <Grid item xs={12} lg={6}>
                         <section>
                             {/* Logo */}

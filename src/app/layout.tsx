@@ -26,8 +26,6 @@ export const metadata: Metadata = {
     images: [{
       url: '/favicon/favicon.ico',
       alt: 'Andréa Pot Logo',
-      width: 800,
-      height: 600,
     }],
     url: 'https://andrea-pot-osteopathe.vercel.app/'
   }
