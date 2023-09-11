@@ -36,11 +36,9 @@
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    background-color: #ebe8de !important;
+    background-color: #ebe8de;
     overflow: hidden;
-    overflow: hidden !important;
     border-radius: 1rem;
-    margin: 1rem;
 }
 .photoPaper {
     position: relative;

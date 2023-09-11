@@ -19,7 +19,7 @@ function Localisation() {
     return (
         <main>
             <Box className={styles.main}>
-                <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} spacing={2} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem"}}}>
+                <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} spacing={2} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem"}, paddingBottom: "1rem"}}>
                     <Grid item xs={12} lg={6}>
                         <section>
                             {/* Logo */}
@@ -40,18 +40,20 @@ function Localisation() {
                     </Grid>
                     <Grid item xs={12} lg={6}>
                         <section>
-                            <Box className={styles.photoContainer} sx={{flexDirection: {xs: "column", lg: "row"}}}>
-                                <Paper elevation={4} className={styles.photoPaper}>
-                                    <motion.div whileTap={{scale: 1.5, transformOrigin: "top center", transition: {duration: .3}}} style={{height:"100%", transformOrigin: "top center"}}>
-                                        <Image src={adresse1} alt="adresse1" className={styles.photo} />
-                                    </motion.div>
-                                </Paper>
-                                <Paper elevation={4} className={styles.photoPaper}>
-                                    <motion.div whileTap={{scale: 1.5, transition: {duration: .3}}} style={{height:"100%"}}>
-                                        <Image src={adresse2} alt="adresse2" className={styles.photo} />
-                                    </motion.div>
-                                </Paper>
-                            </Box>
+                            <Paper elevation={4} sx={{borderRadius: "1rem"}}>
+                                <Box className={styles.photoContainer} sx={{flexDirection: {xs: "column", lg: "row"}}}>
+                                    <Paper elevation={4} className={styles.photoPaper}>
+                                        <motion.div whileTap={{scale: 1.5, transformOrigin: "top center", transition: {duration: .3}}} style={{height:"100%", transformOrigin: "top center"}}>
+                                            <Image src={adresse1} alt="adresse1" className={styles.photo} />
+                                        </motion.div>
+                                    </Paper>
+                                    <Paper elevation={4} className={styles.photoPaper}>
+                                        <motion.div whileTap={{scale: 1.5, transition: {duration: .3}}} style={{height:"100%"}}>
+                                            <Image src={adresse2} alt="adresse2" className={styles.photo} />
+                                        </motion.div>
+                                    </Paper>
+                                </Box>
+                            </Paper>
                         </section>
                     </Grid>
                 </Grid>
