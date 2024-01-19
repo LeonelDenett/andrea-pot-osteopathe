@@ -53,8 +53,8 @@
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
-    object-position: top;
     transition: all .3s;
+    -webkit-user-drag: none;
 }
 
 @media (min-width: 1200px) {

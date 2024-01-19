@@ -32,7 +32,10 @@ function Localisation() {
                                 <Box className={styles.informations}>
                                     <Box className={styles.data}>
                                         <Typography fontWeight={600}>Adresse :</Typography>
-                                        <Typography>Maison médicale de la Baie,<br/> Z.A La Gare,<br/> 29890 Plounéour-Brignogan-Plages</Typography>
+                                        <Typography>Maison de santé de la baie</Typography>
+                                        <Typography>6 Z.A de La Gare</Typography>
+                                        <Typography>Route de Kerlouan</Typography>
+                                        <Typography>29890 Plounéour-Brignogan-Plages</Typography>
                                     </Box>
                                 </Box>
                             </Paper>
@@ -43,12 +46,12 @@ function Localisation() {
                             <Paper elevation={4} sx={{borderRadius: "1rem"}}>
                                 <Box className={styles.photoContainer} sx={{flexDirection: {xs: "column", lg: "row"}}}>
                                     <Paper elevation={4} className={styles.photoPaper}>
-                                        <motion.div whileTap={{scale: 1.5, transformOrigin: "top center", transition: {duration: .3}}} style={{height:"100%", transformOrigin: "top center"}}>
+                                        <motion.div whileHover={{scale: 1.3}} style={{height:"100%", transition: "all .3s"}}>
                                             <Image src={adresse1} alt="adresse1" className={styles.photo} />
                                         </motion.div>
                                     </Paper>
                                     <Paper elevation={4} className={styles.photoPaper}>
-                                        <motion.div whileTap={{scale: 1.5, transition: {duration: .3}}} style={{height:"100%"}}>
+                                        <motion.div whileHover={{scale: 1.3, transformOrigin: "top right"}} style={{height:"100%", transition: "all .3s"}}>
                                             <Image src={adresse2} alt="adresse2" className={styles.photo} />
                                         </motion.div>
                                     </Paper>

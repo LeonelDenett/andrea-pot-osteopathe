@@ -10,10 +10,6 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-
-
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 // Mui Icons
 import PhoneIcon from '@mui/icons-material/Phone';
 import RoomIcon from '@mui/icons-material/Room';
@@ -69,9 +65,18 @@ function Reservation() {
                                             </Box>
                                         </Link>
                                     </Box>
+                                    <Paper elevation={4} className={styles.informations} sx={{display: {lg:"none"}}}>
+                                        <Box>
+                                            <Typography>Adresse : </Typography>
+                                            <Typography>Maison de santé de la baie</Typography>
+                                            <Typography>6 Z.A de La Gare</Typography>
+                                            <Typography>Route de Kerlouan</Typography>
+                                            <Typography>29890 Plounéour-Brignogan-Plages</Typography>
+                                        </Box>
+                                    </Paper>
                                 </Box>
                                 {/* Informations */}
-                                <Box sx={{display: {xs:"none", lg:"flex"}}} className={styles.informationsContainer}>
+                                <Box sx={{display: {xs:"none", lg:"flex"}, marginTop: "1rem"}} className={styles.informationsContainer}>
                                     <Paper elevation={8} className={styles.informations}>
                                         <Box>
                                             <Typography>Téléphone : </Typography>
@@ -79,7 +84,10 @@ function Reservation() {
                                         </Box>
                                         <Box>
                                             <Typography>Adresse : </Typography>
-                                            <Typography>Maison médicale de la Baie, Z.A La Gare, 29890 Plounéour-Brignogan-Plages</Typography>
+                                            <Typography>Maison de santé de la baie</Typography>
+                                            <Typography>6 Z.A de La Gare</Typography>
+                                            <Typography>Route de Kerlouan</Typography>
+                                            <Typography>29890 Plounéour-Brignogan-Plages</Typography>
                                         </Box>
                                     </Paper>
                                 </Box>

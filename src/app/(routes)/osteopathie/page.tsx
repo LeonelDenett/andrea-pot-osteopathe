@@ -27,7 +27,7 @@ function Osteopathie() {
                     <Grid item xs={12} lg={6}>
                         <section>
                             <Box className={styles.osteopathieContainer}>
-                                <Paper elevation={8} className={styles.osteopathie}>
+                                <Paper elevation={8} className={styles.osteopathie} sx={{padding: {xs:"1rem", lg:"2rem"}}}>
                                     <Typography variant='h6' fontWeight={400}>
                                         L&apos;ostéopathie est une médecine manuelle alternative qui permet de diminuer des douleurs
                                         d&apos;origine fonctionnelle.<br/> Elle est complémentaire de la médecine traditionnelle.<br/>

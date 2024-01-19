@@ -10,7 +10,11 @@ function Footer() {
     return (
         <footer>
             <Box className={styles.footer}>
-                <Link style={{textDecoration:"none", color:"inherit"}} href={"https://d-studio.vercel.app/"} target='_blank'>Copyrights © D STUDIO | All rights Reserved</Link>
+                <Link style={{textDecoration:"none", color:"inherit"}} href={"https://d-studio.vercel.app/"} target='_blank'>
+                    <Typography fontFamily={'Rubik Variable, sans-serif'} variant="body1">
+                        Copyrights © D STUDIO | All rights Reserved
+                    </Typography>
+                </Link>
             </Box>
         </footer>
     );
