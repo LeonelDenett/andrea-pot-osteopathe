@@ -45,7 +45,7 @@ function Reservation() {
                     </section>
                 </Grid>
                 {/* Interactive Buttons & Itinerary */}
-                <Grid item xs={12} lg={6} sx={{backgroundColor:'#ebe8de', borderRadius:"2rem"}} mb={2}>
+                <Grid component={Paper} elevation={8} item xs={12} lg={6} sx={{backgroundColor:'#ebe8de', borderRadius:"2rem"}} mb={2}>
                     <Grid container pl={2} pr={2}>
                         <Grid item xs={12}>
                             <section>
