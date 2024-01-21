@@ -31,15 +31,15 @@
 }
 .doctoLib {
     padding: 1rem;
-    background-color: #ffb4ac !important;
+    background-color: #f85442 !important;
     color: #ebe8de !important;
     border-radius: 1.5rem !important;
     margin-bottom: 1rem;
     transition: all .3s ease !important;
 }
 .doctoLib:hover {
-    background-color: #ebe8de !important;
-    color:#ffb4ac !important;
+    background-color: #ed3d29 !important;
+    color:#ebe8de !important;
     scale: 1.1;
     transition: all .3s ease;
 }
