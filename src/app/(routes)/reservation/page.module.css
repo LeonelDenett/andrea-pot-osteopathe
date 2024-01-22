@@ -31,14 +31,39 @@
 }
 .doctoLib {
     padding: 1rem;
-    background-color: #f85442 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0596DE !important;
     color: #ebe8de !important;
     border-radius: 1.5rem !important;
+    border: 2px solid #ebe8de;
     margin-bottom: 1rem;
     transition: all .3s ease !important;
 }
 .doctoLib:hover {
-    background-color: #ed3d29 !important;
+    background-color: #f85442 !important;
+    color:#ebe8de !important;
+    scale: 1.1;
+    transition: all .3s ease;
+}
+.phoneIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 221.33px;
+    height: 84px;
+    max-height: 84px;
+    background-color: #f85442 !important;
+    color: #ebe8de !important;
+    border-radius: 1.5rem !important;
+    border: 2px solid #ebe8de;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    transition: all .3s ease !important;
+}
+.phoneIcon:hover {
+    background-color: #0596DE !important;
     color:#ebe8de !important;
     scale: 1.1;
     transition: all .3s ease;
@@ -78,20 +103,21 @@
     text-align: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: #5c8984 !important;
+    background-color: #48756f !important;
     color: #ebe8de !important;
     margin-bottom: 1rem;
     border-radius: 1.5rem !important;
 }
 .itinerary {
-    background-color: #5c8984;
+    background-color: #48756f;
     color: #ebe8de;
     border-radius: 1.5rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
-    gap: .5rem;
+    align-items: center;
     margin-bottom: 1rem;
+    position: relative;
 }
 .itineraryData {
     display: flex;
@@ -106,7 +132,7 @@
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    background-color: #5c8984;
+    background-color: #48756f;
     color: #ebe8de;
     padding: 1rem;
     gap: .5rem;

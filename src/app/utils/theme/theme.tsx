@@ -4,12 +4,16 @@ import { createTheme, ThemeOptions, ThemeProvider, responsiveFontSizes } from '@
 import CssBaseline from '@mui/material/CssBaseline';
 // Font
 import '@fontsource-variable/rubik';
+import '@fontsource-variable/dancing-script';
 // Cache Provider
 import { NextAppDirEmotionCacheProvider } from './createEmotionCache';
 
 const themeOptions: ThemeOptions = {
     typography: {
         fontFamily: 'Rubik Variable, sans-serif',
+        body2: {
+            fontFamily: 'Dancing Script Variable, sans-serif'
+        }
     },
     components: {
         MuiCard: {

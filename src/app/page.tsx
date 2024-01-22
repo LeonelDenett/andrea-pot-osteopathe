@@ -24,7 +24,7 @@ export default function Home() {
     const overlay = styles.overlay;
     const data = [
         {img: reservation, url: "/reservation", title: "Prendre RDV"},
-        {img: localisation, url: "/localisation", title: "Adresse & Contact"},
+        {img: localisation, url: "/localisation", title: "Adresses"},
         {img: andrea, url: "/andrea", style: {}, styles: "objectPosition: 'center calc(50% + 3.5rem)'", title: "Andréa Pot",},
         {img: osteopathie, url: "/osteopathie", title: "Ostéopathie"},
     ];
@@ -60,7 +60,9 @@ export default function Home() {
                                                     <Box className={styles.titleContainer}>
                                                         <Typography variant="h4" className={styles.title}>{item.title}</Typography>
                                                     </Box>
-                                                    <Box className={overlay}></Box>
+                                                    <Box className={styles.overlay}>
+                                                        
+                                                    </Box>
                                                 </CardMedia>
                                             </Link>
                                         </CardActionArea>

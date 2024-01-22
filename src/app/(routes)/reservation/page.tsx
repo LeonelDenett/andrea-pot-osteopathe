@@ -15,10 +15,12 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import RoomIcon from '@mui/icons-material/Room';
 
 
-
 function Reservation() {
-    const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
-    const hours = ['8h - 19h15', 'Fermé', '8h - 19h15', 'Fermé', '8h - 19h15', '8h - 13h'];
+    const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    const principalHours = ['8h-20h', '/', '8h-20h', '/', '8h-20h', '8h-14h'];
+    const secondaryHours = ['/', '16h-21h', '/', '7h30-12h30 / 16h-21h', '/', '/'];
+
+    
     return (
         <main>
         <Box className={styles.main}>
@@ -34,14 +36,26 @@ function Reservation() {
                         </Box>
                         {/* DoctoLib */}
                         <Box className={styles.center}>
-                            <Link href='https://www.doctolib.fr/osteopathe/plouneour-brignogan-plages/andrea-pot-plouneour-brignogan-plages?pid=practice-465302&agenda_ids%5B%5D=1368561' target='_blank' className={styles.link}>
+                            <Link href='https://www.doctolib.fr/osteopathe/plouneour-brignogan-plages/andrea-pot-plouneour-brignogan-plages/booking/places?specialityId=10&telehealth=false' target='_blank' className={styles.link}>
                                 <Button className={styles.doctoLibContainer}>
                                     <Box component={Paper} elevation={8} className={styles.doctoLib}>
-                                        <Typography variant="h3" fontWeight={300}>DoctoLib</Typography>
+                                        {/* <Typography variant="h3" fontWeight={300}>DoctoLib</Typography> */}
+                                        <img style={{height:"48px", width:"auto" }}
+                                        src="https://www.doctolib.fr/external_button/doctolib-white-transparent.png" alt="Doctolib"/>
                                     </Box>
                                 </Button>
                             </Link>
                         </Box>
+                        {/* Button Phone */}
+                        <Box className={styles.center} sx={{flexDirection:"column"}}>
+                            <Box component={Paper} elevation={8} className={styles.phoneIcon}>
+                                <Button sx={{ textTransform: 'none', width:"100%" }}>
+                                    <Typography fontSize={46} fontWeight={700} color="#ebe8de" fontFamily={'Dancing Script Variable, sans-serif'} >Appeler</Typography>
+                                    <PhoneIcon sx={{color:"#ebe8de"}} fontSize="large" />
+                                </Button>
+                            </Box>
+                        </Box>
+
                     </section>
                 </Grid>
                 {/* Interactive Buttons & Itinerary */}
@@ -51,21 +65,7 @@ function Reservation() {
                             <section>
                                 {/* Icons */}
                                 <Box className={styles.interactiveContainer}>
-                                    <Box className={styles.interactiveButtons} sx={{display: {lg:"none"}}}>
-                                        {/* Phone Icon */}
-                                        <Link href='tel:0760313917'>
-                                            <Box component={Paper} elevation={4} className={styles.buttons}>
-                                                <PhoneIcon fontSize='large'/>
-                                            </Box>
-                                        </Link>
-                                        {/* Gps Icon */}
-                                        <Link target='_blank' href='https://www.google.com/maps/dir//Andr%C3%A9a+Pot+Ost%C3%A9opathe,+Z.A+La+Gare+Maison+m%C3%A9dicale+de+la+Baie,+29890+Ploun%C3%A9our-Brignogan-plages/@48.6437084,-4.3355243,20z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4814019ee663f8d7:0xdfcd58fd0c758eb!2m2!1d-4.3351527!2d48.6436771?entry=ttu'>
-                                            <Box component={Paper} elevation={4} className={styles.buttons}>
-                                                <RoomIcon fontSize='large'/>
-                                            </Box>
-                                        </Link>
-                                    </Box>
-                                    <Paper elevation={4} className={styles.informations} sx={{display: {lg:"none"}}}>
+                                    <Paper elevation={2} className={styles.informations} sx={{display: {lg:"none"}, mt: 2, width:"100%"}}>
                                         <Box>
                                             <Typography>Adresse : </Typography>
                                             <Typography>Maison de santé de la baie</Typography>
@@ -79,44 +79,82 @@ function Reservation() {
                                 <Box sx={{display: {xs:"none", lg:"flex"}, marginTop: "1rem"}} className={styles.informationsContainer}>
                                     <Paper elevation={8} className={styles.informations}>
                                         <Box>
-                                            <Typography>Téléphone : </Typography>
+                                            <Typography fontWeight={600} sx={{textDecoration:"underline"}}>Téléphone : </Typography>
                                             <Typography>07 60 31 39 17</Typography>
                                         </Box>
-                                        <Box>
-                                            <Typography>Adresse : </Typography>
-                                            <Typography>Maison de santé de la baie</Typography>
-                                            <Typography>6 Z.A de La Gare</Typography>
-                                            <Typography>Route de Kerlouan</Typography>
-                                            <Typography>29890 Plounéour-Brignogan-Plages</Typography>
-                                        </Box>
+                                        <Grid container spacing={0} sx={{paddingX:"2.6rem"}} justifyContent={"center"}>
+                                            <Grid item xs={5}>
+                                                <Box>
+                                                    <Typography fontWeight={600} sx={{textDecoration:"underline"}}>Adresse Principale: </Typography>
+                                                    <Typography>Maison de santé de la baie</Typography>
+                                                    <Typography>6 Z.A de La Gare</Typography>
+                                                    <Typography>Route de Kerlouan</Typography>
+                                                    <Typography>29890 Plounéour-Brignogan-Plages</Typography>
+                                                </Box>
+                                            </Grid>
+                                            <Grid item xs={2} sx={{height:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
+                                                <Divider flexItem sx={{backgroundColor: "#ebe8de", width:"2px"}} orientation="vertical" />
+                                            </Grid>
+                                            <Grid item xs={5}>
+                                                <Box>
+                                                    <Typography fontWeight={600} sx={{textDecoration:"underline"}}>Adresse de collaboration:</Typography>
+                                                    <Typography>2 Rue Xavier Grall</Typography>
+                                                    <Typography>29800 Ploudiry</Typography>
+                                                </Box>
+                                            </Grid>
+                                        </Grid>
                                     </Paper>
                                 </Box>
                                 {/* Itinerary */}
-                                <Box className={styles.itineraryContainer}>
-                                    <Paper elevation={4} className={styles.paper}>
+                                <Box className={styles.itineraryContainer} sx={{display: {xs:"none", lg:"inline"}}}>
+                                    <Paper elevation={2} className={styles.paper}>
                                         <Box className={styles.itinerary}>
-                                            {/* Days */}
-                                            <Box>
-                                            {
-                                                days.map((day, index) => (
-                                                    <Box className={styles.itineraryData} key={index}>
-                                                        <Typography>{day}</Typography>
+                                            {/* Principal Hours */}
+                                            <Grid container spacing={0} sx={{paddingX:"0rem"}} justifyContent={"center"}>
+                                                <Grid item xs={5} display={"flex"} gap={4} justifyContent={"center"} alignItems={"center"}>
+                                                    <Box>
+                                                    {
+                                                        days.map((day, index) => (
+                                                            <Box className={styles.itineraryData} key={index}>
+                                                                <Typography fontWeight={600}>{day}</Typography>
+                                                            </Box>
+                                                        ))
+                                                    }
                                                     </Box>
-                                                ))
-                                            }
-                                            </Box>
-                                            {/* Divider */}
-                                            <Divider orientation='vertical' className={styles.divider} flexItem />
-                                            {/* Hours */}
-                                            <Box>
-                                            {
-                                                hours.map((hour, index) => (
-                                                    <Box className={styles.itineraryData} key={index}>
-                                                        <Typography>{hour}</Typography>
+                                                    <Box sx={{textAlign:"center"}}>
+                                                    {
+                                                        principalHours.map((hour, index) => (
+                                                            <Box className={styles.itineraryData} key={index}>
+                                                                <Typography>{hour}</Typography>
+                                                            </Box>
+                                                        ))
+                                                    }
                                                     </Box>
-                                                ))
-                                            }
-                                            </Box>
+                                                </Grid>
+                                                <Grid item xs={2} sx={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+                                                    <Divider flexItem sx={{backgroundColor: "#ebe8de", width:"2px"}} orientation="vertical" />
+                                                </Grid>
+                                                <Grid item xs={5} display={"flex"} gap={4} justifyContent={"center"} alignItems={"center"}>
+                                                    <Box>
+                                                    {
+                                                        days.map((day, index) => (
+                                                            <Box className={styles.itineraryData} key={index}>
+                                                                <Typography fontWeight={600}>{day}</Typography>
+                                                            </Box>
+                                                        ))
+                                                    }
+                                                    </Box>
+                                                    <Box sx={{textAlign:"center"}}>
+                                                    {
+                                                        secondaryHours.map((hour, index) => (
+                                                            <Box className={styles.itineraryData} key={index}>
+                                                                <Typography>{hour}</Typography>
+                                                            </Box>
+                                                        ))
+                                                    }
+                                                    </Box>
+                                                </Grid>
+                                            </Grid>
                                         </Box>
                                     </Paper>
                                 </Box>
@@ -134,8 +172,8 @@ function Reservation() {
                                         </Typography>
                                         <Divider flexItem className={styles.dividerPatients} />
                                         <Typography>
-                                            - Consultations en entreprise<br/>
-                                            - Interventions en urgence
+                                            - Consultation en entreprise<br/>
+                                            - Consultation à domicile
                                         </Typography>
                                     </Box>
                                 </Paper>
