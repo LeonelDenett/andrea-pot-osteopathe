@@ -17,7 +17,6 @@ import andrea from './images/andrea.jpeg';
 import osteopathie from './images/osteopathie.jpeg';
 // Components
 import Logo from './components/logo/Logo';
-import RootLayout from './layout';
 
 
 export default function Home() {
@@ -60,9 +59,7 @@ export default function Home() {
                                                     <Box className={styles.titleContainer}>
                                                         <Typography variant="h4" className={styles.title}>{item.title}</Typography>
                                                     </Box>
-                                                    <Box className={styles.overlay}>
-                                                        
-                                                    </Box>
+                                                    <Box className={styles.overlay}></Box>
                                                 </CardMedia>
                                             </Link>
                                         </CardActionArea>

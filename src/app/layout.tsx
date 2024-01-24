@@ -18,17 +18,8 @@ const siteUrl = "https://andrea-pot-osteopathe.vercel.app/"
 export const metadata: Metadata = {
   title: 'Andréa Pot - Ostéopathe',
   description: 'Andréa Pot, ostéopathe D.O à Maison médicale de la Baie. Spécialisée dans le traitement et la prévention des troubles musculo-squelettiques.',
-  keywords: 'Andréa Pot, ostéopathe, Maison médicale de la Baie, Plounéour-Brignogan-Plages, traitement musculo-squelettique, prévention santé',
+  keywords: 'ostéopathe, Andréa Pot, Maison médicale de la Baie, Plounéour-Brignogan-Plages, traitement musculo-squelettique, prévention santé',
   icons: "/favicon/favicon.ico",
-  openGraph: {
-    title: 'Andréa Pot - Ostéopathe',
-    description: 'Andréa Pot, ostéopathe D.O à Maison médicale de la Baie. Spécialisée dans le traitement et la prévention des troubles musculo-squelettiques.',
-    images: [{
-      url: '/favicon/favicon.ico',
-      alt: 'Andréa Pot Logo',
-    }],
-    url: 'https://andrea-pot-osteopathe.vercel.app/'
-  }
 }
 
 

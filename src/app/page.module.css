@@ -72,11 +72,24 @@
     pointer-events: none;
 }
 
+@media (min-width: 700px) {
+    .main {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .card {
+        height: 15rem;
+    }
+    .cardMedia {
+        height: 15rem;
+    }
+}
+
 @media (min-width: 1200px) {
     .main {
         padding-left: 10rem;
         padding-right: 10rem;
-        height: calc(100vh - 9rem);
+        height: calc(100vh - 8rem);
     }
 }
 
@@ -93,15 +106,3 @@
     }
 }
 
-@media (min-width: 700px) {
-    .main {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    .card {
-        height: 18rem;
-    }
-    .cardMedia {
-        height: 18rem;
-    }
-}

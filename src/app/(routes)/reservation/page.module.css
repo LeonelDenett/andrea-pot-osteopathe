@@ -105,18 +105,18 @@
     padding: 1rem;
     background-color: #48756f !important;
     color: #ebe8de !important;
-    margin-bottom: 1rem;
     border-radius: 1.5rem !important;
 }
 .itinerary {
     background-color: #48756f;
     color: #ebe8de;
     border-radius: 1.5rem;
-    padding: 1rem;
+    padding: 0rem;
     display: flex;
+    flex-grow: 1;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
     position: relative;
 }
 .itineraryData {
@@ -141,11 +141,13 @@
 }
 .dividerPatients {
     background-color: #ebe8de !important;
-    height: 2px !important;
+    display: flex;
+    width: 2px;
+    height: 100%;
 }
 
 @media (min-width: 1200px) {
     .main {
-        height: calc(100vh - 9rem);
+        height: calc(100vh - 8rem);
     }
 }

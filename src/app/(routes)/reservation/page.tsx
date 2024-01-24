@@ -16,17 +16,18 @@ import RoomIcon from '@mui/icons-material/Room';
 
 
 function Reservation() {
-    const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    const principalDays = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    const secondariesDays = ['Mardi', '', 'Jeudi'];
     const principalHours = ['8h-20h', '/', '8h-20h', '/', '8h-20h', '8h-14h'];
-    const secondaryHours = ['/', '16h-21h', '/', '7h30-12h30 / 16h-21h', '/', '/'];
-
+    const secondaryHours = ['16h-21h','', '7h30-12h30 / 16h-21h'];
+    const phoneNumber = '0666575278';
     
     return (
         <main>
         <Box className={styles.main}>
-            <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem", lg:"10rem"}}}>
+            <Grid container display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{paddingX: {xs:"1rem",sm:"3rem",md:"5rem", lg:"3rem", xl:"10rem"}}}>
                 {/* Dashboard */}
-                <Grid item xs={12} lg={6} sx={{backgroundColor:'#5c8984'}}>
+                <Grid item xs={12} lg={4} xl={6} sx={{backgroundColor:'#5c8984'}}>
                     <section>
                         {/* Logo */}
                         <Logo/>
@@ -48,36 +49,45 @@ function Reservation() {
                         </Box>
                         {/* Button Phone */}
                         <Box className={styles.center} sx={{flexDirection:"column"}}>
-                            <Box component={Paper} elevation={8} className={styles.phoneIcon}>
+                        <Box component={Paper} elevation={8} className={styles.phoneIcon}>
+                            <a href={`tel:${phoneNumber}`} style={{textDecoration:"none"}}>
                                 <Button sx={{ textTransform: 'none', width:"100%" }}>
                                     <Typography fontSize={46} fontWeight={700} color="#ebe8de" fontFamily={'Dancing Script Variable, sans-serif'} >Appeler</Typography>
                                     <PhoneIcon sx={{color:"#ebe8de"}} fontSize="large" />
                                 </Button>
+                            </a>
                             </Box>
                         </Box>
-
                     </section>
                 </Grid>
                 {/* Interactive Buttons & Itinerary */}
-                <Grid component={Paper} elevation={8} item xs={12} lg={6} sx={{backgroundColor:'#ebe8de', borderRadius:"2rem"}} mb={2}>
-                    <Grid container pl={2} pr={2}>
+                <Grid item xs={12} lg={8} xl={6} mb={2} mt={2}>
+                    <Grid container pl={2} pr={2} sx={{backgroundColor:'#ebe8de', borderRadius:"2rem"}} component={Paper} elevation={8}>
                         <Grid item xs={12}>
                             <section>
-                                {/* Icons */}
+                                {/* Mobile */}
                                 <Box className={styles.interactiveContainer}>
                                     <Paper elevation={2} className={styles.informations} sx={{display: {lg:"none"}, mt: 2, width:"100%"}}>
                                         <Box>
-                                            <Typography>Adresse : </Typography>
+                                            <Typography>Adresse principale: </Typography>
                                             <Typography>Maison de santé de la baie</Typography>
                                             <Typography>6 Z.A de La Gare</Typography>
                                             <Typography>Route de Kerlouan</Typography>
                                             <Typography>29890 Plounéour-Brignogan-Plages</Typography>
                                         </Box>
                                     </Paper>
+                                    <Paper elevation={2} className={styles.informations} sx={{display: {lg:"none"}, width:"100%"}}>
+                                        <Box>
+                                            <Typography>Adresse de collaboration: </Typography>
+                                            <Typography>2 Rue Xavier Grall</Typography>
+                                            <Typography>29800 Ploudiry</Typography>
+                                        </Box>
+                                    </Paper>
                                 </Box>
-                                {/* Informations */}
-                                <Box sx={{display: {xs:"none", lg:"flex"}, marginTop: "1rem"}} className={styles.informationsContainer}>
-                                    <Paper elevation={8} className={styles.informations}>
+                                {/* Desktop */}
+                                <Box>
+                                <Box sx={{display: {xs:"none", lg:"flex"}, marginTop: "1rem"}}>
+                                    <Paper elevation={2} className={styles.informations}>
                                         <Box>
                                             <Typography fontWeight={600} sx={{textDecoration:"underline"}}>Téléphone : </Typography>
                                             <Typography>07 60 31 39 17</Typography>
@@ -86,10 +96,10 @@ function Reservation() {
                                             <Grid item xs={5}>
                                                 <Box>
                                                     <Typography fontWeight={600} sx={{textDecoration:"underline"}}>Adresse Principale: </Typography>
-                                                    <Typography>Maison de santé de la baie</Typography>
-                                                    <Typography>6 Z.A de La Gare</Typography>
-                                                    <Typography>Route de Kerlouan</Typography>
-                                                    <Typography>29890 Plounéour-Brignogan-Plages</Typography>
+                                                    <Typography sx={{fontSize: {lg:14, xl:16}}}>Maison de santé de la baie</Typography>
+                                                    <Typography sx={{fontSize: {lg:14, xl:16}}}>6 Z.A de La Gare</Typography>
+                                                    <Typography sx={{fontSize: {lg:14, xl:16}}}>Route de Kerlouan</Typography>
+                                                    <Typography sx={{fontSize: {lg:14, xl:16}}}>29890 Plounéour-Brignogan-Plages</Typography>
                                                 </Box>
                                             </Grid>
                                             <Grid item xs={2} sx={{height:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
@@ -98,34 +108,35 @@ function Reservation() {
                                             <Grid item xs={5}>
                                                 <Box>
                                                     <Typography fontWeight={600} sx={{textDecoration:"underline"}}>Adresse de collaboration:</Typography>
-                                                    <Typography>2 Rue Xavier Grall</Typography>
-                                                    <Typography>29800 Ploudiry</Typography>
+                                                    <Typography sx={{fontSize: {lg:14, xl:16}}}>2 Rue Xavier Grall</Typography>
+                                                    <Typography sx={{fontSize: {lg:14, xl:16}}}>29800 Ploudiry</Typography>
                                                 </Box>
                                             </Grid>
                                         </Grid>
                                     </Paper>
                                 </Box>
+                                
                                 {/* Itinerary */}
-                                <Box className={styles.itineraryContainer} sx={{display: {xs:"none", lg:"inline"}}}>
-                                    <Paper elevation={2} className={styles.paper}>
+                                <Box sx={{display: {xs:"none", lg:"flex"}, marginTop:"1rem"}}>
+                                    <Paper elevation={2} className={styles.informations}>
                                         <Box className={styles.itinerary}>
                                             {/* Principal Hours */}
-                                            <Grid container spacing={0} sx={{paddingX:"0rem"}} justifyContent={"center"}>
+                                            <Grid container sx={{paddingX:"2.6rem"}} justifyContent={"center"}>
                                                 <Grid item xs={5} display={"flex"} gap={4} justifyContent={"center"} alignItems={"center"}>
                                                     <Box>
                                                     {
-                                                        days.map((day, index) => (
+                                                        principalDays.map((day, index) => (
                                                             <Box className={styles.itineraryData} key={index}>
-                                                                <Typography fontWeight={600}>{day}</Typography>
+                                                                <Typography sx={{fontSize: {lg:14, xl:16}}} fontWeight={600}>{day}</Typography>
                                                             </Box>
                                                         ))
                                                     }
                                                     </Box>
-                                                    <Box sx={{textAlign:"center"}}>
+                                                    <Box sx={{textAlign:"center",}}>
                                                     {
                                                         principalHours.map((hour, index) => (
                                                             <Box className={styles.itineraryData} key={index}>
-                                                                <Typography>{hour}</Typography>
+                                                                <Typography sx={{fontSize: {lg:14, xl:16}}}>{hour}</Typography>
                                                             </Box>
                                                         ))
                                                     }
@@ -137,18 +148,18 @@ function Reservation() {
                                                 <Grid item xs={5} display={"flex"} gap={4} justifyContent={"center"} alignItems={"center"}>
                                                     <Box>
                                                     {
-                                                        days.map((day, index) => (
-                                                            <Box className={styles.itineraryData} key={index}>
-                                                                <Typography fontWeight={600}>{day}</Typography>
+                                                        secondariesDays.map((day, index) => (
+                                                            <Box className={styles.itineraryData} sx={{marginTop:".1rem"}} key={index}>
+                                                                <Typography sx={{fontSize: {lg:14, xl:16}}} fontWeight={600}>{day}</Typography>
                                                             </Box>
                                                         ))
                                                     }
                                                     </Box>
-                                                    <Box sx={{textAlign:"center"}}>
+                                                    <Box sx={{textAlign:"center", }}>
                                                     {
                                                         secondaryHours.map((hour, index) => (
-                                                            <Box className={styles.itineraryData} key={index}>
-                                                                <Typography>{hour}</Typography>
+                                                            <Box className={styles.itineraryData} sx={{marginTop:".1rem"}} key={index}>
+                                                                <Typography sx={{fontSize: {lg:14, xl:16}}}>{hour}</Typography>
                                                             </Box>
                                                         ))
                                                     }
@@ -158,23 +169,33 @@ function Reservation() {
                                         </Box>
                                     </Paper>
                                 </Box>
+
+                                </Box>
                             </section>
                         </Grid>
                         {/* Patients */}
-                        <Grid item xs={12}>
+                        <Grid item xs={12} mt={2}>
                             <section>
-                                <Paper elevation={4} className={styles.paper}>
+                                <Paper elevation={2} className={styles.paper}>
                                     <Box className={styles.patients}>
-                                        <Typography component='h3' variant='h6'>Qui sont mes patients?</Typography>
-                                        <Typography>
-                                            Mes portes sont ouvertes à tous, nourrissons, enfants, adolescents,
-                                            adultes, seniors, femmes enceintes ou encore sportifs.
-                                        </Typography>
-                                        <Divider flexItem className={styles.dividerPatients} />
-                                        <Typography>
-                                            - Consultation en entreprise<br/>
-                                            - Consultation à domicile
-                                        </Typography>
+                                        <Typography component='h3' variant='h6' sx={{fontSize: {lg:18, xl:20}}}>Qui sont mes patients?</Typography>
+                                        <Grid container>
+                                            <Grid item lg={5}>
+                                                <Typography sx={{fontSize: {lg:14, xl:16}}}>
+                                                    Mes portes sont ouvertes à tous, nourrissons, enfants, adolescents,
+                                                    adultes, seniors, femmes enceintes ou encore sportifs.
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item lg={2} sx={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+                                                <Divider orientation="vertical" flexItem className={styles.dividerPatients} />
+                                            </Grid>
+                                            <Grid item lg={5}>
+                                                <Typography sx={{fontSize: {lg:14, xl:16}}}>
+                                                    - Consultation en entreprise<br/>
+                                                    - Consultation à domicile
+                                                </Typography>
+                                            </Grid>
+                                        </Grid>
                                     </Box>
                                 </Paper>
                             </section>
