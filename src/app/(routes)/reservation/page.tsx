@@ -20,7 +20,7 @@ function Reservation() {
     const secondariesDays = ['Mardi', '', 'Jeudi'];
     const principalHours = ['8h-20h', '/', '8h-20h', '/', '8h-20h', '8h-14h'];
     const secondaryHours = ['16h-21h','', '7h30-12h30 / 16h-21h'];
-    const phoneNumber = '0666575278';
+    const phoneNumber = '0760313917';
     
     return (
         <main>
